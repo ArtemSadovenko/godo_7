@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cttqvt63s7csu"]
+
+[ext_resource type="PackedScene" uid="uid://c8l60rnugru40" path="res://addons/godot-xr-tools/objects/pickable.tscn" id="1_0x3fl"]
+[ext_resource type="PackedScene" uid="uid://c8mup2kl5ps18" path="res://assets/ToothBrush.glb" id="2_31qxc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bytmb"]
+size = Vector3(0.471436, 4, 0.621094)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7enc2"]
+size = Vector3(0.2, 1, 0.3)
+
+[node name="toothBrush" groups=["ToothBrush"] instance=ExtResource("1_0x3fl")]
+mass = 0.04
+
+[node name="CollisionShape3D" parent="." index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0125732, 2.5, 0.0126953)
+shape = SubResource("BoxShape3D_bytmb")
+
+[node name="RigidBody3D" type="StaticBody3D" parent="." index="1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.407874, 4.34449, 0)
+shape = SubResource("BoxShape3D_7enc2")
+
+[node name="ToothBrush" parent="RigidBody3D" index="1" instance=ExtResource("2_31qxc")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.65707, 0)

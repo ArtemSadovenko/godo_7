@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqhp3da0gyy7d"]
+
+[ext_resource type="PackedScene" uid="uid://cg33ijkxibq3u" path="res://assets/jaw.fbx" id="1_t056n"]
+[ext_resource type="PackedScene" uid="uid://27skxfb5ovp1" path="res://scenes/tooth.tscn" id="2_gq0tu"]
+[ext_resource type="PackedScene" uid="uid://c7468fftqumy2" path="res://assets/jaw.glb" id="2_pjf01"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hj66l"]
+size = Vector3(2.2, 0.5, 1.2)
+
+[node name="jaw" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0115089, -0.241152, 0.0754128)
+shape = SubResource("BoxShape3D_hj66l")
+
+[node name="jawModel" parent="StaticBody3D" instance=ExtResource("1_t056n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.234233, 0, 0.697125)
+visible = false
+
+[node name="jaw" parent="StaticBody3D" instance=ExtResource("2_pjf01")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.219137, 0, 0.742212)
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Tooth" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.13824, 0, -0.990399, 0, 1, 0, 0.990399, 0, 0.13824, 0.166645, 0, 0.532987)
+
+[node name="Tooth2" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.137445, 0, 0.990509, 0, 1, 0, -0.990509, 0, 0.137445, -0.128393, 0, 0.527233)
+
+[node name="Tooth3" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.434854, 0, -0.900501, 0, 1, 0, 0.900501, 0, 0.434854, 0.437842, 0, 0.445728)
+
+[node name="Tooth4" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.628194, 0, -0.778057, 0, 1, 0, 0.778057, 0, 0.628194, 0.675894, 0, 0.291079)
+
+[node name="Tooth5" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.841445, 0, -0.540343, 0, 1, 0, 0.540343, 0, 0.841445, 0.873236, 0, 0.0838702)
+
+[node name="Tooth6" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.972039, 0, -0.23482, 0, 1, 0, 0.23482, 0, 0.972039, 0.995525, 0, -0.161125)
+
+[node name="Tooth7" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0361, 0, -0.42625)
+
+[node name="Tooth8" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.433297, 0, 0.901251, 0, 1, 0, -0.901251, 0, 0.433297, -0.401792, 0, 0.429187)
+
+[node name="Tooth9" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.674302, 0, 0.738455, 0, 1, 0, -0.738455, 0, 0.674302, -0.643397, 0, 0.285744)
+
+[node name="Tooth10" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.88348, 0, 0.46847, 0, 1, 0, -0.46847, 0, 0.88348, -0.824806, 0, 0.0633085)
+
+[node name="Tooth11" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(0.952353, 0, 0.304997, 0, 1, 0, -0.304997, 0, 0.952353, -0.943736, 0, -0.189898)
+
+[node name="Tooth12" parent="Node3D" instance=ExtResource("2_gq0tu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.995526, 0, -0.431586)

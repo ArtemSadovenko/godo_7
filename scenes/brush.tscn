@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuipeg3i1dk0f"]
+
+[ext_resource type="PackedScene" uid="uid://c8mup2kl5ps18" path="res://assets/ToothBrush.glb" id="1_mbrur"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2plbq"]
+size = Vector3(0.6, 4, 0.6)
+
+[node name="brush" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.64487, 0)
+shape = SubResource("BoxShape3D_2plbq")
+
+[node name="ToothBrush" parent="StaticBody3D" instance=ExtResource("1_mbrur")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 2.65707, 0)
